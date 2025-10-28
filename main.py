@@ -2,9 +2,13 @@ from list_generator import ListGenerator
 
 if __name__ == "__main__":
 
-    answer: str = input("How long do you want the array to be?")
+    answer: str = input("How long do you want the array to be? ")
+    
+    list_gen = ListGenerator()
+    list_gen.generate_list(int(answer))
 
-    unsorted_list: list = [2, 5, 6, 81, 2, 4, 8, 2, 1]
+    
+    unsorted_list: list = list_gen.get_list()
 
     for i in range(len(unsorted_list)):
         swapped = False
@@ -17,5 +21,4 @@ if __name__ == "__main__":
 
     print(unsorted_list)
     
-    list_gen = ListGenerator()
-    list_gen.generate_list(20)
+    

@@ -2,8 +2,9 @@ import numpy as np
 
 class ListGenerator():
     def __init__(self, seed: int = 42):
-        pass
-
+        self.seed = seed
+        self.generated_list = []
+    
     # Función que genera la lista de ints
     def generate_list(self, length: int):
 
@@ -16,4 +17,7 @@ class ListGenerator():
         # Guardamos la array generada
         self.generated_list = array
 
+    # Función que devuelve la lista
+    def get_list(self):
+        return self.generated_list
 
