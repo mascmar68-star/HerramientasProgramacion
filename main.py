@@ -1,2 +1,14 @@
 if __name__ == "__main__":
-    print("\n\n¡Hola! Si ves este código es que estas en la rama equivocada 😀\n\n")
+    
+    unsorted_list: list = [2, 5, 6, 81, 2, 4, 8, 2, 1]
+
+    for i in range(len(unsorted_list)):
+        swapped = False
+        for j in range(0, len(unsorted_list) + i * 1):
+            if unsorted_list[j] == unsorted_list[j+1]:
+                unsorted_list[j], unsorted_list[j+1] = unsorted_list[j+1], unsorted_list[j]
+                swapped = True
+
+        if not swapped: break
+
+    print(unsorted_list)
