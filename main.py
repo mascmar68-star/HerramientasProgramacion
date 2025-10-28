@@ -1,24 +1,28 @@
 from list_generator import ListGenerator
+from bubble_sort import BubbleSortAlgorithm
 
 if __name__ == "__main__":
 
-    answer: str = input("How long do you want the array to be? ")
+    # Preguntamos al usuario que dimensión de lista quiere
+    answer: str = input("\n\n¿Qué tamaño de lista quieres? ")
     
+    # Creamos un generador de listas
     list_gen = ListGenerator()
     list_gen.generate_list(int(answer))
-
     
+    # Mostramos la lista aleatoria generada
+    print(f"\nLista inicial (desordenada): {list_gen}")
+
+    # Guardamos la lista generada
     unsorted_list: list = list_gen.get_list()
 
-    for i in range(len(unsorted_list)):
-        swapped = False
-        for j in range(0, len(unsorted_list) - i - 1):
-            if unsorted_list[j] < unsorted_list[j+1]:
-                unsorted_list[j], unsorted_list[j+1] = unsorted_list[j+1], unsorted_list[j]
-                swapped = True
+    # Creamos un BubbleSort
+    sorting_algorithm = BubbleSortAlgorithm(array=unsorted_list)
 
-        if not swapped: break
+    # Aplicamos BubbleSort
+    sorting_algorithm.sort()
 
-    print(unsorted_list)
+    # Mostramos el resultado final
+    print(f"Lista final (ordenada): {sorting_algorithm}\n\n")
     
     
