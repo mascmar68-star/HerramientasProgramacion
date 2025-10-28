@@ -4,6 +4,10 @@ class ListGenerator():
     def __init__(self, seed: int = 42):
         self.seed = seed
         self.generated_list = []
+
+    
+    def __str__(self):
+        return str(self.generated_list)
     
     # Función que genera la lista de ints
     def generate_list(self, length: int):
