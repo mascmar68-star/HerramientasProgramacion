@@ -5,11 +5,11 @@ if __name__ == "__main__":
 
     # Preguntamos al usuario que dimensión de lista quiere
     answer: str = input("\n\n¿Qué tamaño de lista quieres? ")
-    
+
     # Creamos un generador de listas
     list_gen = ListGenerator()
     list_gen.generate_list(int(answer))
-    
+
     # Mostramos la lista aleatoria generada
     print(f"\nLista inicial (desordenada): {list_gen}")
 
@@ -24,5 +24,3 @@ if __name__ == "__main__":
 
     # Mostramos el resultado final
     print(f"Lista final (ordenada): {sorting_algorithm}\n\n")
-    
-    
